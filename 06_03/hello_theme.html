@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일 기기 접속시 화면 크기 조절을 위해 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|
+    Materiai_Icons" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" 
+    rel="stylesheet">
+
+    <link href="https:/cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+    rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="app">
+        <!-- 첫 화면의 시작은 v-app 엘리먼트 사용 -->
+        <v-app>
+            <!-- 상단 부분은 v-app-bar 엘리먼트 사용 -->
+            <v-app-bar app color="primary" dark fixed
+            >
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+                <v-toolbar-title>마스터 페이지</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-bth icon>
+                    <v-icon>mdi-dots-vertical</v-icon>
+                </v-bth>
+            </v-app-bar>
+            <!-- 콘텐츠 부분은 v-content 엘리먼트 사용 -->
+            <v-content>
+                
+                <v-container>
+                    <h1 class="display-1 my-5">안녕하세요</h1>
+                    <p class="body-2 my-4">마스터 페이지입니다.</p>
+                    <v-divider></v-divider>
+                    <h1 class="display-3 my-4">안녕하세요</h1>
+                    <p class="body-1 my-4">마스터 페이지입니다.</p>
+                </v-container>
+            </v-content>
+            <!-- 하단 부분은 v-footer 엘리먼트 사용 -->
+            <!-- footer 색상을 secondary로 설정하고 fixed로 위치 고정 -->
+            <v-footer color="secondary" dark fixed>
+                <!-- mx-auto는 블록 레벨 엘리먼트의 내용을 가운데 정렬 -->
+                <div class="mx-auto">Copyright &copy;</div>
+            </v-footer>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            // 뷰티파이 객체 생성
+            vuetify: new Vuetify()
+        })
+    </script>
+</body>
+</html>
