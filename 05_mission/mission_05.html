@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vuex"></script> -->
+    <script>
+        Vue.component('simple-counter',{
+            template:
+            `
+            <button @click="fnIncCounter">
+                카운터: {{ fnGetCounter}}
+                </button>
+            `,
+
+            
+            props:['starnumber'],
+
+            data: function(){
+                return{
+                    nCounter: parseInt(this.starnumber)
+                }
+            },
+           
+            computed:{
+                fnGetCounter: function(){
+                    return this.nCounter
+                }
+            },
+
+            methods:{
+                fnIncCounter: function(){
+                    this.nCounter ++
+                }
+            }
+            
+        })
+    </script>
+</head>
+<body>
+    
+    <div id="app">
+        <simple-counter starnumber="1"></simple-counter>
+        <simple-counter starnumber="10"></simple-counter>
+        <simple-counter starnumber="100"></simple-counter>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app'
+        })
+    </script>
+    
+</body>
+</html>
